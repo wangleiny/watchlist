@@ -1,12 +1,29 @@
-from flask import Flask,url_for
+from flask import Flask,url_for,render_template
+
+
+name = "Lei Wang"
+
+movies = [
+    {'title':'金刚川','year':'2021'},
+    {'title':'熊出没之重返地球','year':'2022'},
+    {'title':'长津湖之水门桥','year':'2022'},
+    {'title':'李茂换太子','year':'2022'},
+    {'title':'四海','year':'2022'},
+    {'title':'这个杀手不太冷静','year':'2022'},
+    {'title':'狙击手','year':'2022'},
+    {'title':'穿过寒冬拥抱你','year':'2022'},
+    {'title':'奇迹.笨小孩','year':'2022'},
+    {'title':'误杀2','year':'2022'},
+    {'title':'跨过鸭绿江','year':'2022'},
+]
+
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return '<h1>欢迎来到我的世界!</h1><img src="http://helloflask.com/totoro.gif">'
+def index():
+    return render_template('index.html',name=name,movies=movies)
 
-@app.route('/index')
 @app.route('/home')
 def home():
     return '<h1>欢迎来到我的主页!</h1>'
