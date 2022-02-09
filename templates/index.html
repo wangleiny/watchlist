@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel ="stylesheet" href="{{url_for('static',filename='style.css')}}" type="text/css">
 	<meta charset="utf-8">
-	<title>{{ name }}'s Watchlist</title>
+	<title>{{ user.name }}常用产品名录</title>
+	<link rel='icon' href="{{ url_for('static',filename='juniper.ico')}}">
 </head>
 <body>
-	<h2>{{ name }}'s Watchlist</h2>
+	<h1>
+		<img alt="Avatar" class="avatar" src="{{ url_for('static',filename='images/foo.png')}}">
+		{{ user.name }}经典畅销款产品名录
+	</h1>
+	
 	{#使用length过滤器获取movies变理的长度#}
-	<p>{{ movies|length }} Titles</p>
-	<ul>
+	<p>共 {{ movies|length }} 款经典系列</p>
+	<ul class="movie-list">
 		{% for movie in movies %} {# 迭代movies变量 #}
-		<li>{{ movie.title }} - {{ movie.year }}</li> {# 等同于movie['title'] #}
+		<li>{{ movie.title }} ----- {{ movie.mode }} </li> {# 等同于movie['title'] #}
 		{% endfor %} {# 使用endfor标签结束for语句 #}
 	</ul>
+	<img alt="juniper" class="juniper" src="{{ url_for('static',filename='images/juniper.jpg')}}">
 	<footer>
-		<small>&copy; 2022 <a href="https://www.juniper.net">Hello Juniper</a></small>
+		<small>&copy; 2022 copyright  <a href="https://www.juniper.net">Juniper Inc.</a></small>
 	</footer>
 </body>
 </html>
