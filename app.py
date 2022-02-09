@@ -36,25 +36,25 @@ def forge():
     name = "Juniper"
     
     movies = [
-        {'title':'MX路由器-运营商款','mode':'MX2020/2010/2008'},
-        {'title':'MX路由器-DC款','mode':'MX10016/10008/10004/10003'},
-        {'title':'MX路由器-经典款','mode':'MX960/480/240'},
-        {'title':'MX路由器-边缘接入款','mode':'MX304/204/150/104'},
+        {'title':'MX Router-SP','mode':'MX2020/2010/2008'},
+        {'title':'MX Router-DC','mode':'MX10016/10008/10004/10003'},
+        {'title':'MX Router-Core','mode':'MX960/480/240'},
+        {'title':'MX Router-Edge','mode':'MX304/204/150/104'},
         
-        {'title':'QFX DC交换机-Spine系列1','mode':'QFX100016/10008/10002'},
-        {'title':'QFX DC交换机-Spine系列2','mode':'QFX5700/5130/5220/5210'},
-        {'title':'QFX DC交换机-Leaf系列','mode':'QFX5110/5120'},
+        {'title':'QFX DC Switch-Spine1','mode':'QFX100016/10008/10002'},
+        {'title':'QFX DC Switch-Spine2','mode':'QFX5700/5130/5220/5210'},
+        {'title':'QFX DC Switch-Leaf','mode':'QFX5110/5120'},
         
-        {'title':'EX 园区网交换机-核心层','mode':'EX9214/9208/9204/9250'},
-        {'title':'EX 园区网交换机-汇聚层','mode':'EX4650/4600/4400/4300'},
-        {'title':'EX 园区网交换机-接入层','mode':'EX4300/2300'},
+        {'title':'EX Campus Switch-Core','mode':'EX9214/9208/9204/9250'},
+        {'title':'EX Campus Switch-Aggregation','mode':'EX4650/4600/4400/4300'},
+        {'title':'EX Campus Switch-Access','mode':'EX4300/2300'},
         
-        {'title':'SRX防火墙-运营商级别','mode':'SRX5800/5600/5400'},
-        {'title':'SRX防火墙-DC级别','mode':'SRX4600/4200/4100/1500'},
-        {'title':'SRX防火墙-企业级别','mode':'SRX550/380/345/340/320/300'},
+        {'title':'SRXFirewall-SP','mode':'SRX5800/5600/5400'},
+        {'title':'SRXFirewall-DC','mode':'SRX4600/4200/4100/1500'},
+        {'title':'SRXFirewall-Edge','mode':'SRX550/380/345/340/320/300'},
         
-        {'title':'Mist无线-室内款','mode':'AP43/41/33/32/12'},
-        {'title':'Mist无线-室外款','mode':'AP63/61'},
+        {'title':'Mist AP-indoor','mode':'AP43/41/33/32/12'},
+        {'title':'Mist AP-outdoor','mode':'AP63/61'},
         
         
     ]
