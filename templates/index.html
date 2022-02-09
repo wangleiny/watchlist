@@ -4,9 +4,9 @@
 <p>{{ movies|length }} 款经典系列</p>
 <ul class="movie-list">
 	{% for movie in movies %}
-	<li>{{ movie.title }} - {{ movie.mode }}
+	<li>{{ movie.title }} ----------> {{ movie.mode }}
 		<span class="float-right">
-			<a class="juniper-1" href="https://www.juniper.net/us/en/search.html?query={{ movie.title }}" target="_write" title="Find this movie on IMDb">juniper</a>
+			<a class="juniper-1" href="https://www.juniper.net/us/en/search.html?query={{ movie.mode }}" target="_write" title="Find this movie on IMDb">juniper</a>
 		</span>
 	</li>
 	{% endfor %}
