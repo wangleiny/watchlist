@@ -96,9 +96,10 @@ def index():
         db.session.commit() # 提交数据库会话
         flash('Item created.') # 显示成功创建的提示 
         return redirect(url_for('index')) # 重定向回主页
-    user = User.query.first()
+    #user = User.query.first()
     movies = Movie.query.all()
-    return render_template('index.html', user=user, movies=movies)
+    #return render_template('index.html', user=user, movies=movies)
+    return render_template('index.html', movies=movies)
 
 
 
