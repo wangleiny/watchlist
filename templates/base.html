@@ -4,13 +4,17 @@
 		{% block head %}
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 		<title>{{ user.name }}常用产品名录</title>
 		<link rel="icon" href="{{ url_for('static', filename='juniper.ico') }}">
 		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
 		{% endblock %}
 	</head>
 	<body>
-		
+		<!--插入到页面标题上方-->
+		{% for message in get_flashed_messages() %}
+		<div class="alert">{{ message }}</div>
+		{% endfor %}
 		<h2>
 			<img alt="Avatar" class="avatar" src="{{ url_for('static', filename='images/foo.png') }}">
 			{{ user.name }}经典畅销款产品名录

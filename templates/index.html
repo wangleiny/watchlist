@@ -2,10 +2,19 @@
 
 {% block content %}
 <p>{{ movies|length }} 款经典系列</p>
+<form method="post">
+	Name <input type="text" name="title" autocomplete="off" required>
+	Mode <input type="text" name="mode" autocomplete="off" required>
+	<input class="btn" type="submit" name="submit" value="Add">
+</form>
 <ul class="movie-list">
 	{% for movie in movies %}
-	<li>{{ movie.title }} ----------> {{ movie.mode }}
+	<li>{{ movie.title }} ------> {{ movie.mode }}
 		<span class="float-right">
+			<a class="btn" href="{{ url_for('edit', movie_id=movie.id) }}">Edit</a>
+			<form class="inline-form" method="post" action="{{ url_for('delete', movie_id=movie.id) }}">
+				<input class="btn" type="submit" name="delete" value="Delete" onclick="return confirm('Are you sure?')">
+			</form>
 			<a class="juniper-1" href="https://www.juniper.net/us/en/search.html?query={{ movie.mode }}" target="_write" title="Find this movie on IMDb">juniper</a>
 		</span>
 	</li>
