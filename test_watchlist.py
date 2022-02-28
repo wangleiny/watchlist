@@ -16,7 +16,8 @@ class WatchlistTestCase(unittest.TestCase):
 		# 创建测试数据，一个用户，一个电影条目
 		user = User(name='Test', username='test') 
 		user.set_password('123')
-		movie = Movie(title='Test Movie Title', mode='juniperos') # 使用 add_all() 方法一次添加多个模型类实例，传
+		movie = Movie(title='Test Movie Title', mode='2022') 
+		add_all()
 		db.session.add_all([user, movie]) 
 		db.session.commit()
 		
