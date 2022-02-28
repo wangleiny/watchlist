@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
 import unittest
-from app import app, db, Movie, User,forge,initdb
+from watchlist import app, db
+from watchlist.models import Movie, User
+from watchlist.commands import forge, initdb
+
 class WatchlistTestCase(unittest.TestCase):
 	def setUp(self): # 更新配置
 		app.config.update(
@@ -13,7 +16,7 @@ class WatchlistTestCase(unittest.TestCase):
 		# 创建测试数据，一个用户，一个电影条目
 		user = User(name='Test', username='test') 
 		user.set_password('123')
-		movie = Movie(title='Test Movie Title', mode='Test') # 使用 add_all() 方法一次添加多个模型类实例，传
+		movie = Movie(title='Test Movie Title', mode='juniperos') # 使用 add_all() 方法一次添加多个模型类实例，传
 		db.session.add_all([user, movie]) 
 		db.session.commit()
 		
